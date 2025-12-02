@@ -320,7 +320,7 @@ function App() {
         {/* Recipient */}
         <div className="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">To: Rexobe Consult</h3>
-          <p className="text-gray-700 mb-1"><span className="font-semibold">Subject:</span> Submission of Full Requirements for CAC Registration (DOMIHIVE PROPERTY SOLUTIONS LTD)</p>
+          <p className="text-gray-700 mb-1"><span className="font-semibold">Subject:</span> Submission of Full Requirements for CAC Registration (Domihive Elite Property Solutions Ltd)</p>
           <p className="text-gray-700"><span className="font-semibold">Company Email:</span> legal@mydomihive.com</p>
         </div>
 
