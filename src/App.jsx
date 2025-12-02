@@ -78,7 +78,7 @@ const directors = [
     phone: '+234 7017102755',
     email: 'emmanuelnnebedum704@gmail.com',
     address: 'Steagles Lodge, Umuchimma, Owerri, Ndioha Street, LGA Awka North. Postal Code 420111',
-    occupation: 'Software Engineer',
+    occupation: 'Software Engineer & Cyber Security Specialist, Business administrator and data analyst',
     attachments: [
       { type: 'Signature', src: emmaSignature, filename: 'emma-signature.jpg' },
       { type: 'Passport Photo', src: emmaPassport, filename: 'emma-passport-photo.jpg' },
@@ -147,7 +147,7 @@ const directors = [
     phone: '+234 8024960677',
     email: 'civviesonline@gmail.com',
     address: '10 Okesuna Street, Surulere, Lagos',
-    occupation: 'Entrepreneur',
+    occupation: 'Entrepreneur & Cyber Security Specialist',
     attachments: [
       { type: 'Signature', src: civviesSignature, filename: 'civvies-signature.jpg' },
       { type: 'Passport Photo', src: civviesPassport, filename: 'civvies-passport-photo.jpg' },
