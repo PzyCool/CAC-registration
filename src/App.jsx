@@ -53,7 +53,9 @@ const directors = [
   {
     id: 1,
     position: 'Chief Executive Officer (CEO)',
-    name: 'Prosper Ovokeroye Matarh Arharhire',
+    surname: 'Arharhire',
+    firstname:'Prosper',
+    othername:'Ovokeroye Matarh',
     state: 'Delta State',
     dob: '08 Nov 2002',
     gender: 'Male',
@@ -71,7 +73,9 @@ const directors = [
   {
     id: 2,
     position: 'Chief Operating Officer (COO)',
-    name: 'Emmanuel Uchenna Nnebedum',
+    surname: 'Nnebedum',
+    firstname:'Emmanuel',
+    othername:'Uchenna',
     state: 'Anambra',
     dob: '17 Dec 2003',
     gender: 'Male',
@@ -88,7 +92,9 @@ const directors = [
   {
     id: 3,
     position: 'Chief Product Officer (CPO)',
-    name: 'Olamide Samuel Oyetayo',
+    surname: 'Oyetayo',
+    firstname: 'Olamide',
+    othername: 'Samuel',
     state: 'Osun',
     dob: '03 July 1989',
     gender: 'Male',
@@ -105,7 +111,9 @@ const directors = [
   {
     id: 4,
     position: 'Chief Technology Officer (CTO)',
-    name: 'Melvin Okievor',
+    surname: 'Okievor',
+    firstname: 'Melvin',
+    othername: 'NIL',
     state: 'Delta',
     dob: '16 Oct 1997',
     gender: 'Male',
@@ -123,7 +131,9 @@ const directors = [
   {
     id: 5,
     position: 'Chief Marketing Officer (CMO)',
-    name: 'Chukwuemeka Ugwumba Nkama',
+    surname: 'Nkama',
+    firstname: 'Chukwuemeka',
+    othername: 'Ugwumba',
     state: 'Ebonyi',
     dob: '10 Nov 1992',
     gender: 'Male',
@@ -140,7 +150,9 @@ const directors = [
   {
     id: 6,
     position: 'Chief Sales Officer (CSO)',
-    name: 'Muhideen Olaniyi Yusuf',
+    surname: 'Yusuf',
+    firstname: 'Muhideen',
+    othername: 'Olaniyi',
     state: 'Lagos',
     dob: '25 Dec 1993',
     gender: 'Male',
@@ -229,53 +241,54 @@ function App() {
 
   // Render director card
   const renderDirectorCard = (director) => (
-    <div key={director.id} className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-gray-50 rounded-xl border border-blue-100 shadow-sm">
-      <div className="mb-4">
-        <h3 className="text-xl font-bold text-blue-800 mb-2">{director.position}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Name:</span> {director.name}</p>
-            <p className="mb-2"><span className="font-semibold text-gray-700">State of Origin:</span> {director.state}</p>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Date of Birth:</span> {director.dob}</p>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Gender:</span> {director.gender}</p>
-          </div>
-          <div>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Phone:</span> {director.phone}</p>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Email:</span> 
-              <a href={`mailto:${director.email}`} className="text-blue-600 hover:text-blue-800 ml-1">{director.email}</a>
-            </p>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Address:</span> {director.address}</p>
-            <p className="mb-2"><span className="font-semibold text-gray-700">Occupation:</span> {director.occupation}</p>
-          </div>
+  <div key={director.id} className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-gray-50 rounded-xl border border-blue-100 shadow-sm">
+    <div className="mb-4">
+      <h3 className="text-xl font-bold text-blue-800 mb-2">{director.position}</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Surname:</span> {director.surname}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Firstname:</span> {director.firstname}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Othername:</span> {director.othername}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">State of Origin:</span> {director.state}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Date of Birth:</span> {director.dob}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Gender:</span> {director.gender}</p>
         </div>
-      </div>
-      
-      <div>
-        <h4 className="font-semibold text-gray-700 mb-3 border-b pb-2">Attachments:</h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {director.attachments.map((attachment, index) => (
-            <div key={index} className="bg-white p-3 rounded-lg border border-gray-200 shadow-sm">
-              <div className="mb-2 h-40 overflow-hidden rounded">
-                <img 
-                  src={attachment.src} 
-                  alt={`${director.name} - ${attachment.type}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-sm font-medium text-gray-700 mb-2">{attachment.type}</p>
-              <button
-                onClick={() => downloadImage(attachment.src, attachment.filename)}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
-              >
-                Download Image
-              </button>
-            </div>
-          ))}
+        <div>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Phone:</span> {director.phone}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Email:</span> 
+            <a href={`mailto:${director.email}`} className="text-blue-600 hover:text-blue-800 ml-1">{director.email}</a>
+          </p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Address:</span> {director.address}</p>
+          <p className="mb-2"><span className="font-semibold text-gray-700">Occupation:</span> {director.occupation}</p>
         </div>
       </div>
     </div>
-  );
-
+    
+    <div>
+      <h4 className="font-semibold text-gray-700 mb-3 border-b pb-2">Attachments:</h4>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {director.attachments.map((attachment, index) => (
+          <div key={index} className="bg-white p-3 rounded-lg border border-gray-200 shadow-sm">
+            <div className="mb-2 h-40 overflow-hidden rounded">
+              <img 
+                src={attachment.src} 
+                alt={`${director.surname} ${director.firstname} - ${attachment.type}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="text-sm font-medium text-gray-700 mb-2">{attachment.type}</p>
+            <button
+              onClick={() => downloadImage(attachment.src, attachment.filename)}
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
+            >
+              Download Image
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 print:p-0">
       {/* Action Buttons */}
@@ -312,14 +325,14 @@ function App() {
             />
           </div>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">DOCUMENT FOR COMPANY REGISTRATION</h1>
-          <h2 className="text-2xl font-bold text-blue-700">DOMIHIVE PROPERTY SOLUTIONS LTD</h2>
+          <h2 className="text-2xl font-bold text-blue-700">Domihive Elite Property Solutions Ltd</h2>
           <p className="text-gray-600 mt-1">Click logo to download</p>
         </div>
 
         {/* Recipient */}
         <div className="mb-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <h3 className="text-lg font-semibold text-gray-700 mb-2">To: Rexobe Consult</h3>
-          <p className="text-gray-700 mb-1"><span className="font-semibold">Subject:</span> Submission of Full Requirements for CAC Registration (DOMIHIVE PROPERTY SOLUTIONS LTD)</p>
+          <p className="text-gray-700 mb-1"><span className="font-semibold">Subject:</span> Submission of Full Requirements for CAC Registration (Domihive Elite Property Solutions Ltd)</p>
           <p className="text-gray-700"><span className="font-semibold">Company Email:</span> legal@mydomihive.com</p>
         </div>
 
@@ -494,7 +507,9 @@ function App() {
               <h3 className="text-xl font-bold text-blue-800 mb-2">Company Secretary</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p className="mb-2"><span className="font-semibold text-gray-700">Name:</span> Faith Efe Adjerese</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">Surname:</span> Adjerese</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">Firstname:</span> Faith</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">Othername:</span> Efe</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">State of Origin:</span> Delta</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Date of Birth:</span> 11 June 2002</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Gender:</span> Female</p>
@@ -548,7 +563,9 @@ function App() {
               <h3 className="text-xl font-bold text-blue-800 mb-2">Witness</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p className="mb-2"><span className="font-semibold text-gray-700">Name:</span> Victor Uzoma Ekeator</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">Surname:</span> Ekeator</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">Firstname:</span> Victor</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">Othername:</span> Uzoma</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">State of Origin:</span> Abia</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Date of Birth:</span> 10 May 1986</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Gender:</span> Male</p>
