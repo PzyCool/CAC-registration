@@ -164,8 +164,7 @@ const shareStructure = [
   { founder: 'Melvin Okievor', position: 'CTO', percentage: '8%', shares: '160,000' },
   { founder: 'Chukwuemeka Nkama', position: 'CMO', percentage: '8%', shares: '160,000' },
   { founder: 'Yusuf Muhideen', position: 'CSO', percentage: '8%', shares: '160,000' },
-  { founder: 'Company Reserve', position: '—', percentage: '20%', shares: '400,000' },
-  { founder: 'ESOP / Staff Pool', position: '—', percentage: '20%', shares: '400,000' },
+  { founder: 'BBW Multi-Skills Ltd', position: 'Parent Company', percentage: '40%', shares: '800,000' },
 ];
 
 function App() {
@@ -437,35 +436,55 @@ function App() {
 
         {/* Section 6: Share Structure */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-blue-800 mb-4 border-l-4 border-blue-600 pl-4">6. SHARE STRUCTURE (AS AGREED IN FOUNDERS AGREEMENT)</h2>
-          <div className="mb-4 p-4 bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg border border-blue-200">
-            <p className="font-bold text-lg text-gray-800">
-              Authorized Share Capital: ₦2,000,000 (2,000,000 shares @ ₦1 each)
-            </p>
-          </div>
-          <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gradient-to-r from-blue-600 to-blue-700">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Founder</th>
-                  <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Position</th>
-                  <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">%</th>
-                  <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Shares</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {shareStructure.map((row, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.founder}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.position}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-blue-600">{row.percentage}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">{row.shares}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+  <h2 className="text-2xl font-bold text-blue-800 mb-4 border-l-4 border-blue-600 pl-4">6. SHARE STRUCTURE</h2>
+  <div className="mb-4 p-4 bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg border border-blue-200">
+    <p className="font-bold text-lg text-gray-800">
+      Authorized Share Capital: ₦2,000,000 (2,000,000 shares @ ₦1 each)
+    </p>
+    <p className="text-gray-700 mt-2">
+      <span className="font-semibold">RC Number of BBW Multi-Skills Ltd:</span> 8603105
+    </p>
+  </div>
+  <div className="overflow-x-auto rounded-lg border border-gray-200 shadow">
+    <table className="min-w-full divide-y divide-gray-200">
+      <thead className="bg-gradient-to-r from-blue-600 to-blue-700">
+        <tr>
+          <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Founder / Shareholder</th>
+          <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Position</th>
+          <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">%</th>
+          <th className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider">Shares</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white divide-y divide-gray-200">
+        {shareStructure.map((row, index) => (
+          <tr 
+            key={index} 
+            className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}
+          >
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {row.founder}
+              {row.founder === 'BBW Multi-Skills Ltd' && (
+                <span className="block text-xs text-gray-500 mt-1">
+                  RC Number: 8603105
+                </span>
+              )}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{row.position}</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-blue-600">{row.percentage}</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">{row.shares}</td>
+          </tr>
+        ))}
+      </tbody>
+      <tfoot className="bg-gradient-to-r from-blue-50 to-blue-100">
+        <tr>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900" colSpan="2">TOTAL</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-blue-700">100%</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">2,000,000</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
 
         {/* Section 7: Company Secretary */}
         <div className="mb-8">
