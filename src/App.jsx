@@ -53,7 +53,9 @@ const directors = [
   {
     id: 1,
     position: 'Chief Executive Officer (CEO)',
-    name: 'Prosper Ovokeroye Matarh Arharhire',
+    surname: 'Arharhire',
+    firstname:'Prosper',
+    othername:'Ovokeroye Matarh',
     state: 'Delta State',
     dob: '08 Nov 2002',
     gender: 'Male',
@@ -71,7 +73,9 @@ const directors = [
   {
     id: 2,
     position: 'Chief Operating Officer (COO)',
-    name: 'Emmanuel Uchenna Nnebedum',
+    surname: 'Nnebedum',
+    firstname:'Emmanuel',
+    othername:'Uchenna',
     state: 'Anambra',
     dob: '17 Dec 2003',
     gender: 'Male',
@@ -88,7 +92,9 @@ const directors = [
   {
     id: 3,
     position: 'Chief Product Officer (CPO)',
-    name: 'Olamide Samuel Oyetayo',
+    surname: 'Oyetayo',
+    firstname: 'Olamide',
+    othername: 'Samuel',
     state: 'Osun',
     dob: '03 July 1989',
     gender: 'Male',
@@ -105,7 +111,9 @@ const directors = [
   {
     id: 4,
     position: 'Chief Technology Officer (CTO)',
-    name: 'Melvin Okievor',
+    surname: 'Okievor',
+    firstname: 'Melvin',
+    othername: 'NIL',
     state: 'Delta',
     dob: '16 Oct 1997',
     gender: 'Male',
@@ -123,7 +131,9 @@ const directors = [
   {
     id: 5,
     position: 'Chief Marketing Officer (CMO)',
-    name: 'Chukwuemeka Ugwumba Nkama',
+    surname: 'Nkama',
+    firstname: 'Chukwuemeka',
+    othername: 'Ugwumba',
     state: 'Ebonyi',
     dob: '10 Nov 1992',
     gender: 'Male',
@@ -140,7 +150,9 @@ const directors = [
   {
     id: 6,
     position: 'Chief Sales Officer (CSO)',
-    name: 'Muhideen Olaniyi Yusuf',
+    surname: 'Yusuf',
+    firstname: 'Muhideen',
+    othername: 'Olaniyi',
     state: 'Lagos',
     dob: '25 Dec 1993',
     gender: 'Male',
@@ -475,7 +487,9 @@ function App() {
               <h3 className="text-xl font-bold text-blue-800 mb-2">Company Secretary</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p className="mb-2"><span className="font-semibold text-gray-700">Name:</span> Faith Efe Adjerese</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">surname:</span> Adjerese</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">firstname:</span> Faith</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">othername:</span> Efe</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">State of Origin:</span> Delta</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Date of Birth:</span> 11 June 2002</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Gender:</span> Female</p>
@@ -529,7 +543,9 @@ function App() {
               <h3 className="text-xl font-bold text-blue-800 mb-2">Witness</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p className="mb-2"><span className="font-semibold text-gray-700">Name:</span> Victor Uzoma Ekeator</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">surname:</span> Ekeator</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">firstname:</span> Victor</p>
+                  <p className="mb-2"><span className="font-semibold text-gray-700">othername:</span> Uzoma</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">State of Origin:</span> Abia</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Date of Birth:</span> 10 May 1986</p>
                   <p className="mb-2"><span className="font-semibold text-gray-700">Gender:</span> Male</p>
